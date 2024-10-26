@@ -1,0 +1,82 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full viewport height */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Container with slide-in animation */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 0.8s ease forwards;
+    transform: translateX(-100%); /* Start off-screen */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Weather-specific background colors */
+.thunderstorm { background-color: #4f4f4f; color: #e6e6e6; }
+.drizzle { background-color: #a6dced; color: #333; }
+.rain { background-color: #78909c; color: #ffffff; }
+.snow { background-color: #e8f7ff; color: #333; }
+.mist, .fog, .haze { background-color: #cfcfcf; color: #333; }
+.smoke, .dust, .ash { background-color: #b0a28b; color: #333; }
+.sand { background-color: #d2b48c; color: #333; }
+.squall, .tornado { background-color: #555555; color: #e6e6e6; }
+
+/* Header and footer styling */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Input and button styling */
+input[type="text"] {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #555;
+}
+
+/* Weather data display styling */
+#weatherResult, #coordinatesResult {
+    font-size: 1.2em;
+    margin-top: 10px;
+}

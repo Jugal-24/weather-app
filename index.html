@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            WEATHER APP
+        </header>
+        <hr>
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <button onclick="getCoordinates()">Get weather update</button>
+
+            <!-- Paragraph to display coordinates -->
+            <p id="coordinatesResult"></p>
+
+            <!-- Paragraph to display weather data -->
+            <p id="weatherResult"></p>
+        </div>
+        <hr>
+        <footer>
+            &copy; jugal2410@gmail.com
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
