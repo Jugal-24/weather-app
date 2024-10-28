@@ -1,7 +1,7 @@
 // Function to get coordinates from a location name
 async function getCoordinates() {
     const location = document.getElementById('location').value;
-    const apiKey = '078494d08a574495b438f931c9ffe875'; // Replace with your actual OpenCage API key
+    const apiKey = 'Open_Cage_API_Key'; // Replace with your actual OpenCage API key
 
     if (location) {
         const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(location)}&key=${apiKey}`;
@@ -28,7 +28,7 @@ async function getCoordinates() {
 
 // Function to get weather data based on latitude and longitude
 async function getWeather(lat, lon) {
-    const apiKey = 'c0fd7cd32302b14bf3dfe4f030deb5f9'; // Replace with your actual OpenWeatherMap API key
+    const apiKey = 'OpenWeatherMap_API_Key'; // Replace with your actual OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     try {
